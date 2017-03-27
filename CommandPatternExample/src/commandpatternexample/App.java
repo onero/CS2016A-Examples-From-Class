@@ -23,10 +23,21 @@ public class App
     {
         Robot r = new Robot(new Point(0,0), PETER);
         
-        MoveForwardCommand mfc =
-                new MoveForwardCommand(r, 2, Direction.UP);
+        RobotCommand mfc =
+                new MoveCommand(r, 2, Direction.UP);
         
-        mfc.execute();
+        //mfc.execute();
+        
+        RobotCommand tc =
+                new TalkCommand(r, "I'm returded", PETER);
+        
+        //tc.execute();
+        
+        RoboController contr =
+                new RoboController(mfc);
+        
+        contr.executeCommand();
+        
         
         // TODO code application logic here
     }

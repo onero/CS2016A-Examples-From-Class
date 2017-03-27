@@ -47,5 +47,11 @@ public class Robot
         System.out.println("New location: " +
                 point.x + "," + point.y);
     }
+
+    public void talk(String talkString, RobotVoiceType voiceType)
+    {
+        System.out.println("[In " + voiceType.name() +
+                "'s voice] " + talkString);
+    }
     
 }

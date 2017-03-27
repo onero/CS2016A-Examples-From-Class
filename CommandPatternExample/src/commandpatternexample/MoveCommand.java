@@ -9,13 +9,13 @@ package commandpatternexample;
  *
  * @author jeppjleemoritzled
  */
-public class MoveForwardCommand implements RobotCommand
+public class MoveCommand implements RobotCommand
 {
     private final Robot r; 
     private final int distance; 
     private final Direction direction;
     
-    public MoveForwardCommand(Robot r, int distance, Direction direction)
+    public MoveCommand(Robot r, int distance, Direction direction)
     {
         this.r = r;
         this.distance=distance;
