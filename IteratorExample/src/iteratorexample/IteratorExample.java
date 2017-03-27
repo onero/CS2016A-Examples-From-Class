@@ -17,7 +17,21 @@ public class IteratorExample
      */
     public static void main(String[] args)
     {
-        // TODO code application logic here
+        RobotArmy ra = new RobotArmy();
+        
+        for(Iterator iter = ra.getIterator();iter.hasNext();)
+        {
+            Robot r = (Robot)iter.next();
+            r.talk("Rhello!", 0);
+        }
+        
+        Iterator iter = ra.getIterator();
+        while(iter.hasNext())
+        {
+            Robot r = (Robot)iter.next();
+            r.talk("Rhello!", 0);
+        }
+        
     }
     
 }
