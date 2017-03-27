@@ -19,16 +19,16 @@ public class IteratorExample
     {
         RobotArmy ra = new RobotArmy();
         
-        for(Iterator iter = ra.getIterator();iter.hasNext();)
+        for(Iterator<Robot> iter = ra.getIterator();iter.hasNext();)
         {
-            Robot r = (Robot)iter.next();
+            Robot r = iter.next();
             r.talk("Rhello!", 0);
         }
         
-        Iterator iter = ra.getIterator();
+        Iterator<Robot> iter = ra.getIterator();
         while(iter.hasNext())
         {
-            Robot r = (Robot)iter.next();
+            Robot r = iter.next();
             r.talk("Rhello!", 0);
         }
         
