@@ -9,28 +9,24 @@ package factoerymethodexample.BE;
  *
  * @author jeppjleemoritzled
  */
-public abstract class Product
-{
-    
+public abstract class AProduct {
+
     private int id;
     private String name;
     private double price;
 
-    public Product(int id, String name, double price)
-    {
+    public AProduct(int id, String name, double price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    
     /**
      * Get the value of price
      *
      * @return the value of price
      */
-    public double getPrice()
-    {
+    public double getPrice() {
         return price;
     }
 
@@ -39,32 +35,28 @@ public abstract class Product
      *
      * @param price new value of price
      */
-    public void setPrice(double price)
-    {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-
-    public int getId()
-    {
+    public int getId() {
         return id;
     }
 
-    public void setId(int id)
-    {
+    public void setId(int id) {
         this.id = id;
     }
-    
+
+    public String getProductInfo() {
+        return "" + id + " " + name + " " + price;
+    }
 
 }

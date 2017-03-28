@@ -9,12 +9,8 @@ package factoerymethodexample.BE;
  *
  * @author jeppjleemoritzled
  */
-public class Cykel extends Product
+public enum EProductType
 {
-
-    public Cykel(int id, String name, double price)
-    {
-        super(id, name, price);
-    }
-    
+    CAR,
+    BIKE
 }

@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factoerymethodexample;
+package factoerymethodexample.BE;
 
 /**
  *
- * @author jeppjleemoritzled
+ * @author gta1
  */
-public enum ProductType
-{
-    BIL,
-    CYKEL
+public enum EProductCategory {
+
+    NEW,
+    OLD_SHEIT
+
 }

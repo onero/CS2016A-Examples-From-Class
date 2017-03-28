@@ -3,15 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factoerymethodexample;
-
-import factoerymethodexample.BE.Product;
+package factoerymethodexample.BE;
 
 /**
  *
  * @author jeppjleemoritzled
  */
-public interface IProductFactory
+public class Bike extends AProduct
 {
-    public Product createProduct(ProductType type, String kategori);
+
+    public Bike(int id, String name, double price)
+    {
+        super(id, name, price);
+    }
+    
 }

@@ -5,30 +5,46 @@
  */
 package factoerymethodexample;
 
-import factoerymethodexample.BE.Product;
-import static factoerymethodexample.ProductType.*;
+import factoerymethodexample.BE.AProduct;
+import factoerymethodexample.BE.EProductCategory;
+import static factoerymethodexample.BE.EProductType.*;
+import factoerymethodexample.BLL.Factory.IProductFactory;
+import factoerymethodexample.BLL.Factory.ProductFactory;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author jeppjleemoritzled
  */
-public class FactoryMethodExample
-{
+public class FactoryMethodExample {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         IProductFactory factory = new ProductFactory();
-        Product nyCykel = 
-                factory.createProduct(CYKEL, "standard");
-        Product gammelCykel = 
-                factory.createProduct(CYKEL, "standard");
-        
-        Product gammelToyota = 
-                factory.createProduct(BIL, "lort");
-        
+        List<AProduct> products = new ArrayList<>();
+
+        AProduct newBike
+                = factory.createProduct(EProductCategory.NEW, BIKE);
+        products.add(newBike);
+        AProduct oldBike
+                = factory.createProduct(EProductCategory.OLD_SHEIT, BIKE);
+        products.add(oldBike);
+
+        AProduct oldToyota
+                = factory.createProduct(EProductCategory.OLD_SHEIT, CAR);
+        products.add(oldToyota);
+
+        AProduct tesla
+                = factory.createProduct(EProductCategory.NEW, CAR);
+        products.add(tesla);
+
+        for (AProduct product : products) {
+            System.out.println(product.getProductInfo());
+        }
+
     }
-    
+
 }
