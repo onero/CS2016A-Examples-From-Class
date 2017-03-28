@@ -10,10 +10,10 @@ import factoerymethodexample.BE.Bike;
 import factoerymethodexample.BE.Car;
 import factoerymethodexample.BE.EProductType;
 
-public class OldSheitProductFactory implements IOldProductFactory {
+public class OldSheitProductFactory implements IProductFactory {
 
     @Override
-    public AProduct createOldProduct(EProductType type) {
+    public AProduct createProduct(EProductType type) {
         switch (type) {
             case CAR:
                 return new Car(IDFactory.getNewID(), "Toyota", 25_000);

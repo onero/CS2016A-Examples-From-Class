@@ -6,10 +6,10 @@
 package factoerymethodexample;
 
 import factoerymethodexample.BE.AProduct;
-import factoerymethodexample.BE.EProductCategory;
 import static factoerymethodexample.BE.EProductType.*;
 import factoerymethodexample.BLL.Factory.IProductFactory;
-import factoerymethodexample.BLL.Factory.ProductFactory;
+import factoerymethodexample.BLL.Factory.NewProductFactory;
+import factoerymethodexample.BLL.Factory.OldSheitProductFactory;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,22 +23,24 @@ public class FactoryMethodExample {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        IProductFactory factory = new ProductFactory();
+        IProductFactory newfactory = new NewProductFactory();
+        IProductFactory oldfactory = new OldSheitProductFactory();
+
         List<AProduct> products = new ArrayList<>();
 
         AProduct newBike
-                = factory.createProduct(EProductCategory.NEW, BIKE);
+                = newfactory.createProduct(BIKE);
         products.add(newBike);
         AProduct oldBike
-                = factory.createProduct(EProductCategory.OLD_SHEIT, BIKE);
+                = oldfactory.createProduct(BIKE);
         products.add(oldBike);
 
         AProduct oldToyota
-                = factory.createProduct(EProductCategory.OLD_SHEIT, CAR);
+                = oldfactory.createProduct(CAR);
         products.add(oldToyota);
 
         AProduct tesla
-                = factory.createProduct(EProductCategory.NEW, CAR);
+                = newfactory.createProduct(CAR);
         products.add(tesla);
 
         for (AProduct product : products) {

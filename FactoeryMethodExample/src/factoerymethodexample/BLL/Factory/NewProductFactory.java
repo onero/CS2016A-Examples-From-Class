@@ -14,10 +14,10 @@ import factoerymethodexample.BE.EProductType;
  *
  * @author jeppjleemoritzled
  */
-public class NewProductFactory implements INewProductFactory {
+public class NewProductFactory implements IProductFactory {
 
     @Override
-    public AProduct createNewProduct(EProductType type) {
+    public AProduct createProduct(EProductType type) {
         switch (type) {
             case CAR:
                 return new Car(IDFactory.getNewID(), "Tesla", 700_000);

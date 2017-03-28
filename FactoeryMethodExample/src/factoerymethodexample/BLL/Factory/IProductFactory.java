@@ -6,7 +6,6 @@
 package factoerymethodexample.BLL.Factory;
 
 import factoerymethodexample.BE.AProduct;
-import factoerymethodexample.BE.EProductCategory;
 import factoerymethodexample.BE.EProductType;
 
 /**
@@ -15,5 +14,5 @@ import factoerymethodexample.BE.EProductType;
  */
 public interface IProductFactory {
 
-    public AProduct createProduct(EProductCategory category, EProductType type);
+    public AProduct createProduct(EProductType type);
 }
