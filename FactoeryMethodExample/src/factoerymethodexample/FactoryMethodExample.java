@@ -28,19 +28,14 @@ public class FactoryMethodExample {
 
         List<AProduct> products = new ArrayList<>();
 
-        AProduct newBike
-                = newfactory.createProduct(BIKE);
+        AProduct newBike = newfactory.createProduct(BIKE);
+        AProduct oldBike = oldfactory.createProduct(BIKE);
+        AProduct oldToyota = oldfactory.createProduct(CAR);
+        AProduct tesla = newfactory.createProduct(CAR);
+
         products.add(newBike);
-        AProduct oldBike
-                = oldfactory.createProduct(BIKE);
         products.add(oldBike);
-
-        AProduct oldToyota
-                = oldfactory.createProduct(CAR);
         products.add(oldToyota);
-
-        AProduct tesla
-                = newfactory.createProduct(CAR);
         products.add(tesla);
 
         for (AProduct product : products) {
