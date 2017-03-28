@@ -56,7 +56,7 @@ public abstract class AProduct {
     }
 
     public String getProductInfo() {
-        return "" + id + " " + name + " " + price;
+        return "ID: " + id + "\nProduct name: " + name + "\nProduct price: " + price;
     }
 
 }
